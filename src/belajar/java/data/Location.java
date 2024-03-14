@@ -1,4 +1,5 @@
 package belajar.java.data;
 
-public class Location {
+public abstract class Location {
+    public String name;
 }
