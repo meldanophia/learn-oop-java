@@ -7,5 +7,6 @@ public class ProductApp {
 
         Product product2 = new Product("Melda", 100);
         System.out.println(app.equals(product2));
+        System.out.println(app.hashCode() == product2.hashCode());
     }
 }
