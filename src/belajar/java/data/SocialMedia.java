@@ -3,11 +3,17 @@ package belajar.java.data;
 class SocialMedia {
     String name;
 }
-
-final class Facebook extends SocialMedia{
-
+class Facebook extends SocialMedia{
+    final void login(String name, String password){
+        //isi method
+    }
 }
 
+//Error
 //class FakeFacebook extends Facebook{
-//    // you cannot extends a final class, because the final class couldn't have anymore child class
+//    void login(String name, String password){
+//        //isi method
+////        you cannot implement final method from the parent class,
+////        the 'final' key means final or the latest
+//    }
 //}
