@@ -1,7 +1,7 @@
 package belajar.java.data;
 
 public class Company {
-    private String name;
+    public String name;
 
     public String getName() {
         return name;
