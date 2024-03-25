@@ -10,6 +10,9 @@ public class CompanyApp {
 
         Company.Employee employee = company.new Employee();
         employee.setName("Melda belajar Java");
+
+        System.out.println(employee.getName());
+        System.out.println(employee.getCompany());
     }
 
 }

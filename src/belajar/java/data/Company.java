@@ -1,7 +1,7 @@
 package belajar.java.data;
 
 public class Company {
-    public String name;
+    private String name;
 
     public String getName() {
         return name;
@@ -13,6 +13,10 @@ public class Company {
 
     public class Employee {
         private String name;
+
+        public String getCompany(){
+            return Company.this.getName();
+        }
 
         public String getName() {
             return name;
