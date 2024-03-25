@@ -11,5 +11,10 @@ public class RecordApp {
         System.out.println(loginRequest.username());
         //getter password
         System.out.println(loginRequest.password());
+
+        System.out.println(new LoginRequest("nopi"));
+        System.out.println(new LoginRequest("nopi", "rahasia dong"));
+
+
     }
 }
