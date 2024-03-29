@@ -1,10 +1,18 @@
 package belajar.java.data;
 
 public enum Level {
-    //kebiasaannya pake huruf capslock
-    STANDARD,
-    PREMIUM,
-    VIP
+    STANDARD("Standard Level"),
+    PREMIUM("Premium Level"),
+    VIP("VIP Level");
 
-    //ttep bisa bikin method dibawah
+    private String description;
+
+    Level(String description){
+        this.description = description;
+    }
+
+    public String getDescription(){
+        return description;
+    }
+
 }
