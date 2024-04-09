@@ -19,7 +19,7 @@ public class ValidationUtil {
         }
     }
 
-    public static void validateReflection(Object object) throws IllegalAccessException{
+    public static void validateReflection(Object object)  {
         Class aClass =  object.getClass();
         // get All fields whether public or private fields
         Field[] fields = aClass.getDeclaredFields();
@@ -29,8 +29,15 @@ public class ValidationUtil {
 
             if(field.getAnnotation(NotBlank.class) != null){
                 //validated
+                try{
+                    String value = (String) field.get(object);
 
-                String value = (String) field.get(object);
+                    if(value == null || value.isBlank()){
+                        throw new BlankException("Field " + field.getName() + " is blank " );
+                    }
+                } catch (IllegalAccessException exception){
+                    System.out.println("Tidak bisa mengakses field" + field.getName());
+                }
             }
 
         }
